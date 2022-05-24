@@ -1,0 +1,23 @@
+.rating-list {
+    display: flex;
+
+    .item-star {
+        width: 30px;
+        @include sm {
+            width: 15px;
+            height: 15px;
+        }
+
+        +.item-star {
+            margin-left: 10px;
+            @include sm {
+               margin-left: 5px;
+            }
+        }
+    }
+
+    @include sm {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+}

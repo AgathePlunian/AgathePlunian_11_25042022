@@ -1,0 +1,53 @@
+.main-nav {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include sm {
+        padding: 20px;
+    }
+} 
+
+.main-header {
+    max-width: 1240px;
+    margin: 0 auto ; 
+}
+
+.img-container {
+    width: 210px;
+    display: block;
+
+    @include sm {
+        width: 145px;
+    }
+}
+
+.nav-container {
+    display: flex;
+    .nav-item {
+        a {
+            color: $primary;
+            text-decoration: none;
+
+            &.active {
+                text-decoration: underline;
+            }
+            @include sm {
+               text-transform: uppercase;
+               font-size: 12px;
+    
+            }
+
+        }
+
+    +.nav-item {
+        margin-left: 57px;
+        @include sm {
+            margin-left: 10px;
+
+        }
+    }
+      
+    }
+}

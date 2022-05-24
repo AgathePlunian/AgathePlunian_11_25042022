@@ -1,0 +1,36 @@
+.banner-home {
+    background-image: url('../assets/img/headerImg.png');
+    min-height: 223px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 43px;
+    padding: 16px;
+    line-height: 1.2;
+
+    @include sm {
+        min-height: 111px;
+        border-radius: 10px;
+        justify-content: start;
+    }
+    
+
+    .home-title {
+        color: $white;
+        font-size: 48px;
+        font-weight: 500;
+
+
+        @include md {
+            font-size:30px;
+        } 
+            
+        @include xs {
+            font-size:24px;
+            max-width: 210px;
+        }
+    } 
+}

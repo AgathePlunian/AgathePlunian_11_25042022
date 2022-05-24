@@ -1,0 +1,18 @@
+.main-footer {
+    background-color: black;
+    padding: 66px 20px 30px;
+    text-align: center;
+    color: $white;
+    font-size: 24px;
+    font-weight: 500;
+    
+    @include sm {
+        font-size: 12px;
+        padding: 60px 20px;
+    }
+
+    .logo-container {
+        max-width: 122px;
+        margin: 0 auto 35px auto;
+    }
+}

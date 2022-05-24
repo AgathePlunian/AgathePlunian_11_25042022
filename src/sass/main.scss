@@ -1,0 +1,17 @@
+@import "./utils/mixin.scss";
+@import "./utils/commons.scss";
+@import "./utils/variables.scss";
+
+@import "./components/gallery.scss";
+@import "./components/header.scss";
+@import "./components/carousel.scss";
+@import "./components/tag.scss";
+@import "./components/rating.scss";
+@import "./components/dropdown-list.scss";
+@import "./components/footer.scss";
+
+
+@import "./pages/error_page.scss";
+@import "./pages/home_page.scss";
+@import "./pages/location_page.scss";
+@import "./pages/about_page.scss";

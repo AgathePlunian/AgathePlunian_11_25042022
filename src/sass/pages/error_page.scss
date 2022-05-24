@@ -1,0 +1,33 @@
+.error-page {
+ text-align: center;
+ color: $primary;
+    @include sm {
+        padding-top: 195px;
+    }
+}
+
+.error-title {
+    font-size: 288px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @include sm {
+        font-size: 96px;
+    }
+}
+
+.error-text {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 170px;
+    @include sm {
+        font-size: 18px;
+        max-width: 260px;
+        margin: 0 auto 130px auto;
+    }
+}
+
+.error-link {
+    font-size: 18px;
+    color: $primary;
+}
+
