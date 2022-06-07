@@ -18,8 +18,7 @@ function About() {
           <li key={index} className="about-block-item">
               <DropDown
                title = {block.title} 
-               text = {block.text}>
-             
+               text = {block.text}>         
               </DropDown>
           </li>
           ))} 

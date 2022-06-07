@@ -19,7 +19,7 @@ function Location() {
     return (
         <div className='container'>   
             {locationData.map((location, index) => (
-                <div className='location-detail-page'key={index}>
+                <div className='location-detail-page' key={index}>
                     <Carousel pictures={location.pictures} ></Carousel> 
                     <div className='location-infos clearfix'>
                         <div className='infos-col-left'>
@@ -52,9 +52,7 @@ function Location() {
                             text = {location.equipments}>       
                         </DropDownList>
                         </div>
-                    </div>
-                  
-
+                    </div>                
                 </div>
             ))}         
         </div>

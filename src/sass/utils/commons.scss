@@ -45,6 +45,7 @@ table {
 
 body {
     font-family: 'Montserrat', sans-serif;
+	height: 100%;
 }
 
 .container {
@@ -52,6 +53,7 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 auto;
+	overflow: hidden;
 }
 
 * {

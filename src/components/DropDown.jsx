@@ -8,7 +8,7 @@ function DropDown({title , text}) {
    // Handle open and close block
   function handleDropDown(e) {
   setCurrent(currentState === false ? true : false); 
-  let div = e.target.parentNode.parentNode.parentNode.getBoundingClientRect();
+  /* let div = e.target.parentNode.parentNode.parentNode.getBoundingClientRect();
   var bottom = div.y;
   if(currentState === false ) {
     setTimeout(function() { 
@@ -17,7 +17,7 @@ function DropDown({title , text}) {
           left: 0,
           behavior: 'smooth'});
     }, 100)
-  } 
+  }  */
 }
     
     return (

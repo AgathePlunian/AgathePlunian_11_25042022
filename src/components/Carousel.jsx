@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 function Carousel({pictures}) {
 
-    const [current, setCurrent] = useState(0);
+    const [currentPicture, setCurrentPicture] = useState(0);
     const slidesLength = pictures.length;
 
     // Add buttons if this is more that one picture
@@ -11,20 +11,22 @@ function Carousel({pictures}) {
         if (pictures.length > 1) {
             return (
                 <div>
-                    <button className="btn prev-btn" onClick={prevBtn}></button>
-                    <button className="btn next-btn" onClick={nextBtn}></button>
+                    <button className="btn prev-btn" onClick={goPrevBtn}></button>
+                    <button className="btn next-btn" onClick={goNextBtn}></button>
                 </div> )
         }
     }
   
     // Go to previous image on click
-    function prevBtn()  {
-        setCurrent(current === 0 ? slidesLength - 1 : current - 1);
+    function goPrevBtn()  {
+        setCurrentPicture(currentPicture === 0 ? slidesLength - 1 : currentPicture - 1);
+        console.log(currentPicture)
     }
 
     // Go to next image on click
-    function nextBtn() {       
-        setCurrent(current === slidesLength - 1 ? 0 : current + 1);
+    function goNextBtn() {       
+        setCurrentPicture(currentPicture === slidesLength - 1 ? 0 : currentPicture + 1);
+        console.log(currentPicture)
     }
 
     return (
@@ -34,9 +36,9 @@ function Carousel({pictures}) {
                 {pictures && pictures.map((picture, index) => (
                     <li 
                         key={index}
-                        className={index === current ? "active carousel-item" : "inactive carousel-item"} 
+                        className={index === currentPicture ? "active carousel-item" : "inactive carousel-item"} 
                     >               
-                        <img src={`${picture}`} alt={`Carousel ${index}`} />
+                        <img src={picture} alt={`Carousel ${index}`} />
                     </li>
                 ))} 
             </ul>

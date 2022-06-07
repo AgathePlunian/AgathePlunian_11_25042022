@@ -1,6 +1,7 @@
 .error-page {
  text-align: center;
  color: $primary;
+ padding: 30px 0 50px;
     @include sm {
         padding-top: 195px;
     }
