@@ -4,6 +4,16 @@
     overflow: hidden;
     width: 100%;
     margin-bottom: 30px;
+    padding-bottom: 25px ;
+
+    .number-picture {
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        @include sm {
+            display: none;
+        }
+    }
 
     .carousel-inner {
         width: 100%;
@@ -30,7 +40,7 @@
                 top: 50%;
                 transform: translateY(-50%);
                 z-index: -1;
-                min-width: 100%;
+                min-height: 110%;
             }
         }
     }

@@ -1,23 +1,34 @@
 import { useState} from 'react'
-import PropTypes from 'prop-types'
+
 
 function DropDown({title , text}) {
+
+  function BlockContent() {
+    if (Array.isArray(text)) {
+      return (
+        <ul className='dropdown-list'>
+          {text && text.map((text, index) => (
+            <li key={`${text}-${index}`} className='dropdown-item'>{text}</li>
+          ))}  
+        </ul>
+      )
+    }
+
+    else {
+      return (
+        <p>{text}</p>
+      )
+    }
+  }
+
+  
 
   const [currentState, setCurrent] = useState(false);
    
    // Handle open and close block
   function handleDropDown(e) {
   setCurrent(currentState === false ? true : false); 
-  /* let div = e.target.parentNode.parentNode.parentNode.getBoundingClientRect();
-  var bottom = div.y;
-  if(currentState === false ) {
-    setTimeout(function() { 
-      window.scrollTo({  
-          top: bottom,
-          left: 0,
-          behavior: 'smooth'});
-    }, 100)
-  }  */
+ 
 }
     
     return (
@@ -26,16 +37,12 @@ function DropDown({title , text}) {
             <h2>{title}</h2>
         </div>
         <div className="dropdown-block-body">
-          <p>{text}</p>
+          <BlockContent></BlockContent>
         </div>
       </div>
     )
   }
 
-   DropDown.propTypes = {
-    title:  PropTypes.string,
-    text : PropTypes.string
-  }
-   
+ 
   
   export default DropDown

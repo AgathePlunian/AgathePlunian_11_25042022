@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 
 function Carousel({pictures}) {
 
-    const [currentPicture, setCurrentPicture] = useState(0);
+    const [currentPicture, setCurrentPicture] = useState(1);
     const slidesLength = pictures.length;
+    
 
     // Add buttons if this is more that one picture
     function AddBtn() {   
@@ -19,14 +20,13 @@ function Carousel({pictures}) {
   
     // Go to previous image on click
     function goPrevBtn()  {
-        setCurrentPicture(currentPicture === 0 ? slidesLength - 1 : currentPicture - 1);
+        setCurrentPicture(currentPicture === 1 ? slidesLength - 1 : currentPicture - 1);
         console.log(currentPicture)
     }
 
     // Go to next image on click
     function goNextBtn() {       
-        setCurrentPicture(currentPicture === slidesLength - 1 ? 0 : currentPicture + 1);
-        console.log(currentPicture)
+        setCurrentPicture(currentPicture === slidesLength - 1 ? 1 : currentPicture + 1);
     }
 
     return (
@@ -39,6 +39,7 @@ function Carousel({pictures}) {
                         className={index === currentPicture ? "active carousel-item" : "inactive carousel-item"} 
                     >               
                         <img src={picture} alt={`Carousel ${index}`} />
+                        <p className='number-picture'>{currentPicture}/{slidesLength-1}</p>
                     </li>
                 ))} 
             </ul>

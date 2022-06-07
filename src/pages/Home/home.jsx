@@ -3,7 +3,7 @@ import UseFetch from '../../utils/Hooks/useFetch'
 
 function Home() {
   const data = UseFetch('./data.json')
-
+ 
   return (
     <div className="main-homepage">
         <div className="container">

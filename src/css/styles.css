@@ -210,6 +210,17 @@ img {
   overflow: hidden;
   width: 100%;
   margin-bottom: 30px;
+  padding-bottom: 25px;
+}
+.carousel-container .number-picture {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+@media (max-width: 820px) {
+  .carousel-container .number-picture {
+    display: none;
+  }
 }
 .carousel-container .carousel-inner {
   width: 100%;
@@ -235,7 +246,7 @@ img {
   top: 50%;
   transform: translateY(-50%);
   z-index: -1;
-  min-width: 100%;
+  min-height: 110%;
 }
 @media (max-width: 820px) {
   .carousel-container {
@@ -507,7 +518,7 @@ img {
 @media (max-width: 599px) {
   .banner-home .home-title {
     font-size: 24px;
-    max-width: 210px;
+    max-width: 220px;
   }
 }
 
